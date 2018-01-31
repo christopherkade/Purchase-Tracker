@@ -1,9 +1,8 @@
 <template>
   <div class="login">
-        <h1 class="title">Sign In</h1>
-        <input class="input" type="text" placeholde r="Email" v-model="email"/><br/>
+        <input class="input" type="text" placeholder="Email" v-model="email"/><br/>
         <input class="input" type="password" placeholder="Password" v-model="password"/><br/>
-        <button class="button is-primary" type="submit" v-on:click="login()">Connection</button>
+        <button class="button is-primary" type="submit" v-on:click="login()">Sign me in</button>
         <notification :message="error" v-if="error != ''" />
   </div>
 </template>
@@ -40,8 +39,12 @@ export default {
 
 <style scoped>
 .login {
-    padding-top: 25vh;
+    padding-top: 40vh;
     text-align: center;
+    height: 100%;
+    background: #67b26f; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #67b26f, #4ca2cd); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #67b26f, #4ca2cd); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .input {    

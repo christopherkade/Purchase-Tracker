@@ -42,9 +42,8 @@ export default {
 
 .card:hover .card-delete {
   position: absolute;
-  width: 30px;
+  width: 40px;
   top: 40%;
-  right: 50%;
   display: inline-block;
   text-align: center;
 }

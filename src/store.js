@@ -12,11 +12,6 @@ export const store = new Vuex.Store({
     getters: {
         purchases: state => state.purchases,
         purchasesNum: state => state.purchases.length,
-        purchaseId: state => {
-            var maxId = Math.max.apply(Math, state.purchases.map(o => {
-                console.log('max id = ' + o.id);                
-            }))
-        },
         totalPrice: state => {
             let total = 0
             state.purchases.forEach(purchase => {

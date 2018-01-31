@@ -36,7 +36,7 @@ a:active {
 }
 
 a:hover {
-  background-color: #6FC6FF;
+  background-color: #4CA2CB;
 }
 
 @media (max-width: 850px) {
