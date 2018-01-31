@@ -6,6 +6,8 @@ import firebase from 'firebase'
 
 Vue.use(Router)
 
+// TODO: Solve problem where url is https://christopherkade.com/login istead of https://christopherkade.com/STracker/login and reload takes us back to
+// https://christopherkade.com
 let router = new Router({
   mode: 'history',
   routes: [
