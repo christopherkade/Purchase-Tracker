@@ -13,10 +13,10 @@ let router = new Router({
   routes: [
     {
       path: '/',
-      redirect: '/login'
+      redirect: '/STracker/login'
     },
     {
-      path: '/home',
+      path: '/STracker/home',
       name: 'Home',
       component: Home,
       meta: {
@@ -24,13 +24,13 @@ let router = new Router({
       }
     },
     {
-      path: '/login',
+      path: '/STracker/login',
       name: 'Login',
       component: Login
     },
     {
       path: '*',
-      redirect: '/login'
+      redirect: '/STracker/login'
     }
   ]
 })

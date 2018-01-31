@@ -39,7 +39,7 @@ export default {
   methods: {
       signout () {
         firebase.auth().signOut().then(() => {
-            this.$router.replace('login')
+            this.$router.replace('/STracker/login')
         })
       }
   }

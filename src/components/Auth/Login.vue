@@ -25,7 +25,7 @@ export default {
       login () {
         firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(() => {
             this.error = ''
-            this.$router.replace('home')
+            this.$router.replace('/STracker/home')
         }, err => {
             this.error = err.message
         });
