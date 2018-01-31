@@ -1,5 +1,5 @@
 <template>
-   <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+   <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <div class="navbar-item">
             <total />
@@ -47,7 +47,11 @@ export default {
 </script>
 
 <style scoped>
-
+.navbar {
+    background: #67b26f;
+    background: -webkit-linear-gradient(to right, #67b26f, #4ca2cd);
+    background: linear-gradient(to right, #67b26f, #4ca2cd);
+}
 </style>
 
 

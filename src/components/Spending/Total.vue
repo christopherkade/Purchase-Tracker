@@ -1,6 +1,6 @@
 <template>
     <div class="total-value">
-      Total: {{this.$store.getters.totalPrice}} €
+      Total: <span>{{this.$store.getters.totalPrice}} €</span> 
     </div>
 </template>
 
@@ -21,6 +21,10 @@ export default {
     text-decoration: none;
     display: inline-block;
     width: auto;
+}
+
+span {
+    font-weight: bold;
 }
 
 @media (max-width: 850px) {

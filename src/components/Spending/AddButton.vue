@@ -1,5 +1,6 @@
 <template>
-  <a v-on:click="buttonClick()">New purchase</a>
+  <!-- <a v-on:click="buttonClick()">New purchase</a> -->
+  <div class="fab" v-on:click="buttonClick"> + </div>
 </template>
 
 <script>
@@ -17,33 +18,35 @@ export default {
 </script>
 
 <style scoped>
-a {
-    margin-top: 15px;
-    border-radius: 5px;
-    padding: 5px 15px;
-    font-size: 1em;
-    text-decoration: none;
-    color: #fff;    
-    display: inline-block;
-    background-color: #55acee;
-    box-shadow: 0px 5px 0px 0px #3C93D5;    
+.fab {
+   transition: all 0.1s ease-in-out; 
+   box-shadow: 0 3px 3px 0 #666;
+   background-color: #4CA2CB;
+   text-align: center;
+   border-radius: 50%;
+   line-height: 65px; 
+   font-size: 35px;
+   position: fixed;
+   color: white;
+   bottom: 50px;
+   height: 70px;
+   width: 70px;
+   left: 50px;
 }
-
-a:active {
-  transform: translate(0px, 5px);
-  -webkit-transform: translate(0px, 5px);
-  box-shadow: 0px 1px 0px 0px;
-}
-
-a:hover {
-  background-color: #4CA2CB;
+ 
+.fab:hover {
+  transform: scale(1.05);
+  cursor: pointer;
 }
 
 @media (max-width: 850px) {
-  a {
-    font-size: 15px;
-    padding: 5px 10px;
+  .fab {
+    line-height: 45px;
+    font-size: 30px;
+    height: 50px;
+    bottom: 15px;
+    width: 50px;
+    left: 15px;
   }
 }
-
 </style>
