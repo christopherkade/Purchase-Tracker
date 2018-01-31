@@ -1,0 +1,57 @@
+<template>
+    <div class="card">
+      <img class="card-delete" src="@/assets/delete.svg" v-on:click="deletePurchase"/>
+      <div class="card-content">
+        <p class="title">
+          {{purchase.title}}
+        </p>
+        <p class="subtitle">
+          {{purchase.price}} €
+        </p>
+      </div>
+    </div>
+</template>
+
+<script>
+import db from '@/database.js'
+import { store } from '@/store'
+
+export default {
+  name: 'Purchase',
+  props: [ 'purchase' ],
+  store,
+  methods: {
+    deletePurchase () {      
+      let dbRef = db.ref('purchases/' + this.purchase.id)
+      dbRef.remove().then(() => {
+        this.$store.commit('deletePurchase', this.purchase.id);        
+      })
+    }
+  }
+}
+</script>
+
+<style scoped>
+.card-delete {
+  display: none;
+}
+
+.card:hover {
+  opacity: 0.5;
+}
+
+.card:hover .card-delete {
+  position: absolute;
+  width: 30px;
+  top: 40%;
+  right: 50%;
+  display: inline-block;
+  text-align: center;
+}
+
+.card-delete:hover {
+  cursor: pointer;
+}
+</style>
+
+

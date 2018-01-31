@@ -1,0 +1,53 @@
+<template>
+   <nav class="navbar is-fixed-top is-primary" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        <div class="navbar-item">
+            <total />
+        </div>
+
+        <button class="button navbar-burger" v-on:click="isActive = !isActive">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+      </div>
+
+      <div class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
+          <div class="navbar-end">
+              <a class="navbar-item" v-on:click="signout">
+                  Sign out
+              </a>
+          </div>
+      </div>
+    </nav>
+</template>
+
+<script>
+import Total from './Spending/Total'
+import firebase from 'firebase'
+
+export default {
+  name: 'navbar',
+  data () {
+      return {
+        isActive: false
+      }
+  },
+  components: {
+      Total
+  },
+  methods: {
+      signout () {
+        firebase.auth().signOut().then(() => {
+            this.$router.replace('login')
+        })
+      }
+  }
+}
+</script>
+
+<style scoped>
+
+</style>
+
+
