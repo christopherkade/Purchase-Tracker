@@ -52,23 +52,7 @@ export default {
     margin: 10px 0;
     box-shadow: none;
     border: 1px solid white;
-    color: white;
     border-radius: 0;
-    background-color: transparent;
-}
-
-/* Placeholder color */
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  color: white;
-}
-::-moz-placeholder { /* Firefox 19+ */
-  color: white;
-}
-:-ms-input-placeholder { /* IE 10+ */
-  color: white;
-}
-:-moz-placeholder { /* Firefox 18- */
-  color: white;
 }
 
 .button {
