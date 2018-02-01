@@ -13,9 +13,9 @@
       </div>
 
       <div class="navbar-menu" v-bind:class="{ 'is-active': isActive }">
-          <div class="navbar-end">
-              <a class="navbar-item" v-on:click="signout">
-                  Sign out
+          <div class="navbar-end">              
+              <a class="navbar-item signOut-btn" v-on:click="signout">
+                  <img src="@/assets/sign-out.svg" />
               </a>
           </div>
       </div>
@@ -59,6 +59,16 @@ export default {
 .navbar-burger {
     background-color: transparent;
     border: none;
+}
+
+.signOut-btn:hover {
+    background-color: transparent;
+    opacity: 0.5;
+    color: #4a4a4a;
+}
+
+img {
+    width: 20px;
 }
 </style>
 
