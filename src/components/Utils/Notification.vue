@@ -19,6 +19,12 @@ export default {
     right: 0;
     margin: 5px;
 }
+
+@media (max-width: 850px) {
+    .notification {
+        width: auto;
+    }
+}
 </style>
 
 

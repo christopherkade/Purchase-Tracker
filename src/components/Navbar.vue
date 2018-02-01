@@ -25,9 +25,11 @@
 <script>
 import Total from './Spending/Total'
 import firebase from 'firebase'
+import { store } from '@/store'
 
 export default {
   name: 'navbar',
+  store,
   data () {
       return {
         isActive: false
@@ -38,6 +40,7 @@ export default {
   },
   methods: {
       signout () {
+        store.commit('resetPurchases')
         firebase.auth().signOut().then(() => {
             this.$router.replace('/STracker/login')
         })

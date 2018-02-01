@@ -38,7 +38,8 @@ export const store = new Vuex.Store({
                 return purchase.id
             }).indexOf(id)
             state.purchases.splice(index, 1)
-        },        
+        },
+        resetPurchases: state => state.purchases = [],
         displayModal: state => state.showModal = true,
         hideModal: state => state.showModal = false,
         setUser(state, newUser) {

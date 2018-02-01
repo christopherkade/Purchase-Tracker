@@ -18,8 +18,8 @@ import { store } from '@/store'
 
 export default {
   name: 'Purchase',
-  props: [ 'purchase' ],
   store,
+  props: [ 'purchase' ],
   methods: {
     deletePurchase () {      
       let dbRef = db.ref('purchases/' + store.getters.user.uid + '/' + this.purchase.id)

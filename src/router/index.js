@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import Login from '@/components/Auth/Login'
+import SignUp from '@/components/Auth/SignUp'
 import firebase from 'firebase'
 
 Vue.use(Router)
@@ -25,6 +26,11 @@ let router = new Router({
       path: '/STracker/login',
       name: 'Login',
       component: Login
+    },
+    {
+      path: '/STracker/signup',
+      name: 'SignUp',
+      component: SignUp
     },
     {
       path: '*',
