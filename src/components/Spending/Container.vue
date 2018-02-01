@@ -3,7 +3,7 @@
         <purchase v-for="purchase of this.$store.getters.purchases" v-bind:key="purchase.id" :purchase="purchase"/>
         <spinner v-if="loading" />
         <modal />    
-        <add-button v-if="!loading"/>
+        <add-button />
     </div>
 </template>
 

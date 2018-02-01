@@ -51,6 +51,12 @@ export default {
 .card-delete:hover {
   cursor: pointer;
 }
+
+@media (max-width: 850px) {
+    .title {
+      font-size: 1.5em;
+    }
+}
 </style>
 
 
