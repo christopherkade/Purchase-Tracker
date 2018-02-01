@@ -1,4 +1,4 @@
-> Personal budget / spending tracker
+> Personal spending tracker
 
 Stack:
 - Vue (with Vuex and Vue-router)
