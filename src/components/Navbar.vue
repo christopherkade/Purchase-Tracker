@@ -52,6 +52,11 @@ export default {
     background: -webkit-linear-gradient(to right, #67b26f, #4ca2cd);
     background: linear-gradient(to right, #67b26f, #4ca2cd);
 }
+
+.navbar-burger {
+    background-color: transparent;
+    border: none;
+}
 </style>
 
 

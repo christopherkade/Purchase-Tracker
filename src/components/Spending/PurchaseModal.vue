@@ -3,14 +3,14 @@
   <div class="modal-background"></div>
   <div class="modal-card">
     <header class="modal-card-head">
-      <input class="modal-card-title input" v-model="purchase.title" placeholder="E.g: Cereal"/>
+      <input class="modal-card-title input is-primary" v-model="purchase.title" placeholder="E.g: Cereal"/>
     </header>
     <section class="modal-card-body">
-      <input class="input" v-model="purchase.price" placeholder="E.g: 42"/>
+      <input class="input is-primary" v-model="purchase.price" placeholder="E.g: 42"/>
     </section>
     <footer class="modal-card-foot">
-      <button class="button is-success" v-on:click="savePurchase()">Save changes</button>
-      <button class="button" v-on:click="closeModal()">Cancel</button>
+      <button class="button is-primary" v-on:click="savePurchase()">Save changes</button>
+      <button class="button is-danger" v-on:click="closeModal()">Cancel</button>
     </footer>
   </div>
 </div>
@@ -52,7 +52,16 @@ export default {
 </script>
 
 <style scoped>
+.input {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
 
+.input:focus {
+  border: none;
+  box-shadow: none;
+}
 </style>
 
 
