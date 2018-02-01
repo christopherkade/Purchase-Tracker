@@ -7,7 +7,8 @@ Vue.config.debug = true
 export const store = new Vuex.Store({
     state: {
         purchases: [],
-        showModal: false
+        showModal: false,
+        user: null
     },
     getters: {
         purchases: state => state.purchases,
@@ -19,7 +20,8 @@ export const store = new Vuex.Store({
             });
             return total
         },
-        showModal: state => state.showModal
+        showModal: state => state.showModal,
+        user: state => state.user
     },
     mutations: {
         // Adds a new purchase to the array
@@ -28,16 +30,19 @@ export const store = new Vuex.Store({
                 id: newPurchase.id,
                 title: newPurchase.title,
                 price: newPurchase.price
-            });
+            })
         },
         // Deletes a purchase with the given id
         deletePurchase(state, id) {
             var index = state.purchases.map(purchase => {
                 return purchase.id
-            }).indexOf(id);
-            state.purchases.splice(index, 1);
+            }).indexOf(id)
+            state.purchases.splice(index, 1)
         },        
         displayModal: state => state.showModal = true,
-        hideModal: state => state.showModal = false
+        hideModal: state => state.showModal = false,
+        setUser(state, newUser) {
+            state.user = newUser
+        }
     }
 });

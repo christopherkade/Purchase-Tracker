@@ -17,8 +17,6 @@ import { store } from '@/store.js'
 import firebase from 'firebase'
 import db from '@/database.js'
 
-let dbRef = db.ref('purchases/')
-
 export default {
     name: 'Container',
     components: {
@@ -35,6 +33,8 @@ export default {
     methods: {
         // Catches purchase addition / deletion / edition
         managePurchases () {
+            let dbRef = db.ref('purchases/' + store.getters.user.uid)
+            
             this.loading = true
             // Load purchases from the database
             dbRef.on('value', snapshot => {

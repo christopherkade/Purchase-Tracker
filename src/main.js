@@ -14,6 +14,12 @@ Vue.config.productionTip = false
 // Setup your Firebase config here
 let app;
 firebase.auth().onAuthStateChanged(user => {
+  // Save user info
+  store.commit('setUser', user)
+  // if (user) {
+  // } else {
+  //   store.commit('setUser', null)
+  // }
   if (!app) {
     app = new Vue({
       store,

@@ -22,7 +22,7 @@ export default {
   store,
   methods: {
     deletePurchase () {      
-      let dbRef = db.ref('purchases/' + this.purchase.id)
+      let dbRef = db.ref('purchases/' + store.getters.user.uid + '/' + this.purchase.id)
       dbRef.remove().then(() => {
         this.$store.commit('deletePurchase', this.purchase.id);        
       })
@@ -44,6 +44,7 @@ export default {
   position: absolute;
   width: 40px;
   top: 40%;
+  left: 48%;
   display: inline-block;
   text-align: center;
 }

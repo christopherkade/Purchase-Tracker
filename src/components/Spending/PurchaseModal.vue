@@ -20,8 +20,6 @@
 import { store } from '@/store.js'
 import db from '@/database.js'
 
-let dbRef = db.ref('purchases/')
-
 export default {
   name: 'modal',
   store,
@@ -39,6 +37,8 @@ export default {
         this.$store.commit('hideModal')
       },
       savePurchase () {
+        let dbRef = db.ref('purchases/' + store.getters.user.uid)
+        
         var id = this.purchase.id
         dbRef.push({
             title: this.purchase.title,
