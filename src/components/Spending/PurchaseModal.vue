@@ -36,7 +36,7 @@ export default {
   },  
   methods: {
       closeModal () {
-          this.$store.commit('hideModal')
+        this.$store.commit('hideModal')
       },
       savePurchase () {
         var id = this.purchase.id
